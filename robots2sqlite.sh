@@ -27,3 +27,7 @@ for letter in $(echo */); do
 	done
 done
 #done
+
+# TODO what pwd are we in?
+# we are done, so let's remove the original files (after making a backup)
+7z a meta/files-$today.7z files/*/*/$today && rm -f files/*/*/$today
