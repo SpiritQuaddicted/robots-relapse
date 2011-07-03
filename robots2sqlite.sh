@@ -1,9 +1,6 @@
 #!/bin/bash
 #sqlite3 robots.db "CREATE TABLE files (id INTEGER PRIMARY KEY, domain TEXT, time INTEGER, content BLOB)"; #TEXT?
 
-# sqlite3 robots.db "INSERT INTO files (time, file) VALUES ($time, '${filecontent}');"
-# sqlite3 robots.db "SELECT * FROM files;"
-
 # this outer loop was for a bigger import of the old data
 #dates=( 20110626 20110627 20110628 20110629 20110630 20110701 20110702 )
 #for day in "${dates[@]}"

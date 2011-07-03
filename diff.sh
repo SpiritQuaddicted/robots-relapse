@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 ## todo
 ## diff between the latest two files per domain
 ## if just one file, check age. no idea what to do then

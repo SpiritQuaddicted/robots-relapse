@@ -1,3 +1,4 @@
+#!/bin/bash
 # Downloads robots.txt files from the daily top 1 million sites in Alexa's toplist
 # Written by Spirit, 20110617ff, do what you want with it
 
@@ -6,13 +7,10 @@
 # Temporary files will be inside your current directory
 
 # TODO: Remove first empty line in the domain list
-# TODO: Do something about all the HTML and other filth
-#   maybe grep for ^Disallow|^Allow and discard non-matches?
-## ARGH chinaren.com, sohu.com,  gets downloaded as gzipped data. sqlite3 hangs on importing then
-## comicbookmovie.com, lazygirls.info = image data
+# ARGH: Why does aria2c download some files as gzipped data? Wget does not do this. Examples are chinaren.com, sohu.com
 
 # ARGH: The domains come without subdomains, so it might be a good idea to download the www.$domain/robots.txt instead or in addition. Without www. I got ~7500/10000, with www. I got 7800/10000
-# YAY:  If downloading 100k use this: find files/*/*/20110628 -print0 | xargs -0 ls -l | wc -l
+# YAY:  If downloading 100k use this for checking how many files you got down: find files/*/*/20110628 -print0 | xargs -0 ls -l | wc -l
 # takes 300min to download 100k
 # takes 60min to 7z 100k
 
