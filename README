@@ -1,0 +1,18 @@
+By default this will download robots.txt files from the "top" 10000 websites according to Alexa's rankings.
+It will then use the file utility to remove rubbish (such as HTML or image files we got served). This is ugly but I cannot think of a better way to do this. Websites serve you the craziest things for robots.txt and I do not want to keep all that.
+Once the files were downloaded, it will insert their contents in a sqlite3 database.
+Then it will 7z the downloaded files and delete them from the directory structure.
+
+It is meant to be run daily.
+
+Dependencies:
+aria2c for downloading
+sqlite3 for storage
+7z for backups/archival of the originally downloaded files
+
+How to use:
+Make sure the files are executable. Put them into an empty directory. Launch ./doit.sh
+
+Warning:
+At the moment this is not very finished, contains absolute paths and will probably delete all your data.
+
