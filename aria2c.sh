@@ -15,7 +15,6 @@
 # takes 60min to 7z 100k
 
 today=$(date +%Y%m%d) #20110621
-
 echo "Downloading download list"
 	mkdir -pv files
 	mkdir -pv meta
@@ -25,7 +24,7 @@ echo "Downloading download list"
 	### using the whole list, aria2c will use >3GB RAM when loading the download list, so let us just get 10000 domains... :}
 	### 100000 might work with 3GB
 	### 10000 domains usually got be around 7500 robots.txt files down.
-	head -n 10000 top-1m.csv > temp
+	head -n 100 top-1m.csv > temp
 	awk 'FS="," {print $2}' temp > domains #remove the "top X number" from before the domain
 	rm temp
 	rm -v top-1m.csv

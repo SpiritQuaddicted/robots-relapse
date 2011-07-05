@@ -11,7 +11,7 @@ sqlite3 for storage
 7z for backups/archival of the originally downloaded files
 
 How to use:
-Make sure the files are executable. Put them into an empty directory. Launch ./doit.sh
+Make sure the files are executable. Put them into an empty directory. Launch aria2c.sh, afterwards run robots2sqlite.sh. You can play with diff.sh.
 
 Warning:
 At the moment this is not very finished, contains absolute paths and will probably delete all your data.
