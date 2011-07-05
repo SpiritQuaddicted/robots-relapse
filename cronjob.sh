@@ -1,5 +1,5 @@
 #!/bin/bash
-robotsroot="~/robots-relapse"
+robotsroot="/your/path/robots-relapse"
 mkdir -pv ${robotsroot}
 cd ${robotsroot}
 ./aria2c.sh 
