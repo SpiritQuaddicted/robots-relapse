@@ -11,8 +11,12 @@ sqlite3 for storage
 7z for backups/archival of the originally downloaded files
 
 How to use:
-Make sure the files are executable. Put them into an empty directory. Launch aria2c.sh, afterwards run robots2sqlite.sh. You can play with diff.sh.
+Make sure the files are executable. Put them into an empty directory. Edit the path in cronjob.sh. Launch this file for the whole deal. Alternatively launch aria2c.sh, afterwards run robots2sqlite.sh (you must pass the directory path). You can play with diff.sh.
 
 Warning:
-At the moment this is not very finished, contains absolute paths and will probably delete all your data.
+At the moment this is not very finished, will probably delete all your data.
 
+TODO:
+- A lot.
+- How about: Discard unchanged files before inserting them into the database. Argh, how to do this if I remove the files each day? Diff against database query? Ugh ugh UGH!
+--- No, bad idea. The diff option is something one can do with the dataset later on. Do not make things too complicated...
