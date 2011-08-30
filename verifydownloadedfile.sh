@@ -8,7 +8,7 @@
 
 today=$(date +%Y%m%d) #20110621
 
-if test "$(file $3 | grep -E '(.*data.*|.*empty.*|.*HTML document.*|.*gzip compressed data.*|.*application.*|^PE32 executable.*|.*image data.*)' )"; then
-	echo "Removing $3" >> meta/removal-$today.log     
+if test "$(file $3 | grep -E '(.*data.*|.*empty.*|.*HTML document.*|.*gzip compressed data.*|.*application.*|.*PE32 executable.*|.*image data.*)' )"; then
+	echo "Removing $3" $(file $3) >> meta/removal-$today.log     
 	rm $3
 fi
