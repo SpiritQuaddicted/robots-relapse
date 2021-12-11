@@ -42,7 +42,7 @@ echo "Preparing download list"
 	done < domains
 
 echo "Downloading..."
-	aria2c --max-concurrent-downloads=12 --connect-timeout=5 --max-tries=2 --remote-time=true --allow-overwrite=true --on-download-complete=verifydownloadedfile.sh --log-level=notice --log=meta/aria2c-$today.log -i aria2c_download_list
+	aria2c --max-concurrent-downloads=12 --connect-timeout=5 --max-tries=2 --remote-time=true --allow-overwrite=true --on-download-complete=./verifydownloadedfile.sh --log-level=notice --log=meta/aria2c-$today.log -i aria2c_download_list
 	ls -1 files/*/*/$today | wc -l
 	echo "files were downloaded"
 
